@@ -20,6 +20,6 @@ const scores = {
   'C Z': 6
 }
 
-const score = values.reduce((a, b) => {return a + scores[b]}, 0)
+const score = values.reduce((a, b) => a + scores[b])
 
 console.log(`Total score: ${score}`)
