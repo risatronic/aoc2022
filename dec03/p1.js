@@ -1,9 +1,8 @@
 const fs = require('fs')
 const input = fs.readFileSync('./input.txt', 'utf-8')
 const values = input.substring(0, input.lastIndexOf('\n')).split('\n')
-let total = 0
 
-for(const string of values){
+const total = values.reduce((total, string) => { 
   const midpoint = (string.length / 2)
   const firstHalf = string.slice(0, midpoint)
   const secondHalf = string.slice(midpoint)
@@ -23,6 +22,8 @@ for(const string of values){
       break
     }
   }
-}
+
+  return total
+}, 0)
 
 console.log(`Sum of priorities: ${total}`)
