@@ -4,10 +4,9 @@ const values = input.substring(0, input.lastIndexOf('\n')).split('\n')
 let total = 0
 
 for(let i = 0; i < values.length; i += 3){
-  const rucksacks = values.slice(i, i + 3).sort((a, b) => b.length - a.length)
-  const rucksack1 = rucksacks[0] // longest
-  const rucksack2 = rucksacks[1]
-  const rucksack3 = rucksacks[2]
+  const [rucksack1, // longest
+         rucksack2,
+         rucksack3] = values.slice(i, i + 3).sort((a, b) => b.length - a.length)
 
   for(const char of rucksack1){
     if(rucksack2.includes(char) && rucksack3.includes(char)){
