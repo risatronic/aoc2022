@@ -49,7 +49,7 @@ for(let y = 0; y < values.length; y++){
         }
       }
 
-      const scenicScore = left * right * up * downs
+      const scenicScore = left * right * up * down
 
       if(scenicScore > maxScore){
         maxScore = scenicScore
